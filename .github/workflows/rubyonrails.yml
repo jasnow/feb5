@@ -14,10 +14,10 @@ jobs:
       RAILS_ENV: test
 
     steps:
-      - name: 
+      - name:
         uses: actions/checkout@v3
 
-      - name: 
+      - name:
         run: |
           sudo apt-get install libsqlite3-dev
       - name:
@@ -25,7 +25,7 @@ jobs:
         with:
           bundler-cache: true
 
-      - name: 
+      - name:
         run: bin/rails db:schema:load
 
       - name:
